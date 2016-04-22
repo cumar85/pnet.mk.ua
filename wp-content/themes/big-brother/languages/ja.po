@@ -1,0 +1,258 @@
+# Translation of Big-brother in Japanese
+# This file is distributed under the same license as the Big-brother package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2014-08-14 00:53:04+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: GlotPress/0.1\n"
+"Project-Id-Version: Big-brother\n"
+
+msgid "Full Width Page"
+msgstr "全幅ページ"
+
+msgid "A pleasant-to-read, customizable theme designed for large organizations and government."
+msgstr "大規模な団体や自治体などのサイト向けにデザインされた、読みやすくカスタマイズ可能なテーマ。"
+
+#: searchform.php:11
+msgctxt "placeholder"
+msgid "Search &hellip;"
+msgstr "検索 &hellip;"
+
+#: searchform.php:13
+msgctxt "submit button"
+msgid "Search"
+msgstr "検索"
+
+#: search.php:21
+msgid "Search Results for: %s"
+msgstr "検索結果: %s"
+
+#: searchform.php:10
+msgctxt "label"
+msgid "Search for:"
+msgstr "検索:"
+
+#: no-results.php:28
+msgid "It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help."
+msgstr "お探しのコンテンツを見つけられませんでした。検索をお試しください。"
+
+#: no-results.php:19
+msgid "Ready to publish your first post? <a href=\"%1$s\">Get started here</a>."
+msgstr "最初の投稿をする準備ができましたか ?  <a href=\"%1$s\">ここからスタート</a>してください。"
+
+#: no-results.php:23
+msgid "Sorry, but nothing matched your search terms. Please try again with some different keywords."
+msgstr "ご指定の検索条件に一致する投稿がありませんでした。他のキーワードでもう一度検索してみてください。"
+
+#: inc/template-tags.php:74
+msgid "<span class=\"posted-on\">%1$s</span>"
+msgstr "<span class=\"posted-on\">%1$s</span>"
+
+#: no-results.php:13
+msgid "Nothing Found"
+msgstr "見つかりません"
+
+#: inc/template-tags.php:48
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr "新しい投稿 <span class=\"meta-nav\">&rarr;</span>"
+
+#: inc/template-tags.php:44
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr "<span class=\"meta-nav\">&larr;</span> 過去の投稿"
+
+#: inc/template-tags.php:38
+msgctxt "Previous post link"
+msgid "&larr;"
+msgstr "&larr;"
+
+#: inc/template-tags.php:39
+msgctxt "Next post link"
+msgid "&rarr;"
+msgstr "&rarr;"
+
+#: inc/template-tags.php:34
+msgid "Post navigation"
+msgstr "投稿ナビゲーション"
+
+#: header.php:38
+msgid "Skip to content"
+msgstr "コンテンツへ移動"
+
+#: functions.php:230
+msgctxt "Gentium font: on or off"
+msgid "on"
+msgstr "on"
+
+#: functions.php:236
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr "on"
+
+#: header.php:37
+msgid "Menu"
+msgstr "メニュー"
+
+#: functions.php:198
+msgid "Articles posted by %s"
+msgstr "%s の投稿"
+
+#: functions.php:201
+msgid "Error 404"
+msgstr "404 エラー"
+
+#: functions.php:215 inc/extras.php:66
+msgid "Page %s"
+msgstr "ページ %s"
+
+#: functions.php:191
+msgid "Search results for &#39;%s&#39;"
+msgstr "検索結果: %s"
+
+#: functions.php:194
+msgid "Posts tagged &#39;%s&#39;"
+msgstr "「%s」タグがついた投稿"
+
+#: functions.php:145
+msgid "Home"
+msgstr "ホーム"
+
+#: functions.php:41
+msgid "Primary Menu"
+msgstr "メインメニュー"
+
+#: functions.php:42
+msgid "Social Links"
+msgstr "ソーシャルリンク"
+
+#: functions.php:76
+msgid "Sidebar"
+msgstr "サイドバー"
+
+#: footer.php:19
+msgid "Theme: %1$s by %2$s."
+msgstr "Theme: %1$s by %2$s."
+
+#: footer.php:17
+msgid "Proudly powered by %s"
+msgstr "Proudly powered by %s"
+
+#: content.php:63
+msgid "% Comments"
+msgstr "%件のコメント"
+
+#: content.php:63
+msgid "1 Comment"
+msgstr "1件のコメント"
+
+#: content.php:63
+msgid "Leave a comment"
+msgstr "コメントする"
+
+#: content-single.php:33
+msgid "<span class=\"entry-tags\">%2$s</span>"
+msgstr ""
+
+#: content-single.php:41
+msgid "<span class=\"entry-categories\">%1$s</span><span class=\"entry-tags\">%2$s</span>"
+msgstr "<span class=\"entry-categories\">%1$s</span><span class=\"entry-tags\">%2$s</span>"
+
+#: content-single.php:43 content.php:30
+msgid "<span class=\"entry-categories\">%1$s</span>"
+msgstr "<span class=\"entry-categories\">%1$s</span>"
+
+#: content.php:38
+msgid "<span class=\"entry-tags\">%1$s</span>"
+msgstr "<span class=\"entry-tags\">%1$s</span>"
+
+#: content.php:51
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr "続きを読む <span class=\"meta-nav\">&rarr;</span>"
+
+#: content-single.php:19 content.php:20
+msgid "All %s posts"
+msgstr "すべての%s投稿"
+
+#: content-single.php:25 content-single.php:28 content.php:27 content.php:35
+msgid ", "
+msgstr ", "
+
+#: content-page.php:23 content-single.php:69 content.php:66
+msgid "Edit"
+msgstr "編集"
+
+#: content-page.php:18 content-single.php:62 content.php:54
+msgid "Pages:"
+msgstr "ページ:"
+
+#: comments.php:64
+msgid "Comments are closed."
+msgstr "コメントは受け付けていません。"
+
+#: comments.php:39 comments.php:53
+msgid "Newer Comments &rarr;"
+msgstr "新しいコメント &rarr;"
+
+#: comments.php:37 comments.php:51
+msgid "Comment navigation"
+msgstr "コメントナビゲーション"
+
+#: comments.php:38 comments.php:52
+msgid "&larr; Older Comments"
+msgstr "&larr; 古いコメント"
+
+#: comments.php:30
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] "「%2$s」への%1$s件のフィードバック"
+
+#: archive.php:58
+msgid "Archives"
+msgstr "アーカイブ"
+
+#: archive.php:52 functions.php:209
+msgid "Quotes"
+msgstr "引用"
+
+#: archive.php:55 functions.php:211
+msgid "Links"
+msgstr "リンク"
+
+#: archive.php:49 functions.php:207
+msgid "Videos"
+msgstr "動画"
+
+#: archive.php:46 functions.php:205
+msgid "Images"
+msgstr "画像"
+
+#: archive.php:40
+msgid "Year: %s"
+msgstr "年別アーカイブ: %s"
+
+#: archive.php:43 functions.php:203
+msgid "Asides"
+msgstr "アサイド"
+
+#: archive.php:34
+msgid "Day: %s"
+msgstr "日別アーカイブ: %s"
+
+#: archive.php:37
+msgid "Month: %s"
+msgstr "月別アーカイブ: %s"
+
+#: 404.php:19
+msgid "It looks like nothing was found at this location. Maybe try a search?"
+msgstr "こちらには何もありません。検索をお試しください。"
+
+#: archive.php:31
+msgid "Author: %s"
+msgstr "作成者: %s"
+
+#: 404.php:15
+msgid "Oops! That page can&rsquo;t be found."
+msgstr "お探しのページが見つかりません。"

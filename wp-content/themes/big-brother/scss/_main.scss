@@ -1,0 +1,877 @@
+// ==========================================================================
+// Main author styles
+// ==========================================================================
+
+html,
+body {
+    background: desaturate(lighten($main-color, 66%), 50%);
+}
+.custom-background {
+    .site-footer {
+        border-top: 10px solid $main-color;
+    }
+}
+body.page-template-full-width-php .primary{
+    width: 100%;
+}
+
+// ==========================================================================
+// Header
+// ==========================================================================
+
+.site-header {
+    text-align: center;
+    background: $main-color;
+}
+.site-header {
+    position: relative;
+}
+.header-image {
+    background-repeat: no-repeat;
+    -moz-background-size: cover;
+	-o-background-size: cover;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.site-branding {
+    position: relative;
+    margin: 50px 0 30px;
+}
+.site-branding.has-header {
+	min-height: 67px;
+}
+.site-title {
+    margin: 0 30px;
+    font-size: 30px;
+    text-transform: uppercase;
+
+    a {
+        color: #fff;
+    }
+}
+.site-description {
+    margin: 0 30px;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: $gentium;
+    font-style: italic;
+}
+.primary {
+    padding: 30px 0;
+}
+.secondary {
+    padding: 30px;
+    font-size: 16px;
+
+    .widget {
+        &:first-of-type {
+            @include border-radius-corner(left, top, 5px);
+            @include border-radius-corner(right, top, 5px);
+        }
+        &:last-of-type {
+            @include border-radius-corner(left, bottom, 5px);
+            @include border-radius-corner(right, bottom, 5px);
+        }
+    }
+}
+.article-wrapper {
+	@extend .clearfix;
+    margin: 0 0 15px;
+    padding: 30px;
+    background: #fff;
+    @include border-radius-corner(right, top, 5px);
+    @include border-radius-corner(right, bottom, 5px);
+}
+.hentry {
+    text-align: left;
+}
+
+
+// ==========================================================================
+// Main Navigation
+// ==========================================================================
+
+.main-navigation {
+	position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    font-family: $open-sans;
+    a,
+    a:visited {
+        color: desaturate(lighten($main-color, 62%), 5%);
+
+        &:hover,
+        &:active {
+            color: desaturate(lighten($main-color, 70%), 0%);
+        }
+    }
+}
+
+.menu-toggle {
+	background: darken($main-color, 4%);
+	cursor: pointer;
+	color: white;
+	margin: 0 auto;
+	padding: 15px 0;
+}
+.header-image ~ .menu-toggle {
+	background: transparentize(darken($main-color, 4%), .4);
+}
+.menu-toggle,
+.main-navigation.toggled .nav-menu {
+	display: block;
+}
+.main-navigation > div > ul {
+	position: absolute;
+	z-index: 1;
+}
+.main-navigation.toggled > div > ul {
+	background: darken($main-color, 4%);
+	border-top: 1px solid $main-color;
+}
+.main-navigation ul {
+	@extend .clearfix;
+	display: none;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	width: 100%;
+	li li {
+		float: none;
+		display: block;
+	}
+	li a {
+		border-bottom: 1px solid $main-color;
+		display: block;
+		padding: 7px 30px;
+	}
+	li li a {
+		padding: 7px 30px 7px 45px;
+	}
+	li li li a {
+		padding: 7px 30px 7px 60px;
+	}
+	ul {
+		display: block;
+	}
+}
+.nav-horizontal > div > ul > li {
+	float: none;
+}
+
+
+// ==========================================================================
+// Breadcrumbs
+// ==========================================================================
+
+.breadcrumbs {
+	font-family: $open-sans;
+	font-size: 16px;
+	padding-top: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+.breadcrumbs-ancestor:before,
+.breadcrumbs-current:before {
+	color: rgba(40,40,40,0.2);
+	content: ">";
+	display: inline;
+	margin: 0 7px;
+}
+
+
+// ==========================================================================
+// Content
+// ==========================================================================
+
+.page-header {
+	background: #fff;
+	padding: 15px 30px;
+	text-align: right;
+	margin: 0 0 15px;
+	@include border-radius-corner(right, top, 5px);
+	@include border-radius-corner(right, bottom, 5px);
+}
+.page-title {
+	display: block;
+	font-size: 18px;
+	color: desaturate(lighten($main-color, 10%), 30%);
+	text-align: left;
+	text-transform: uppercase;
+
+	span {
+		font-weight: 800;
+	}
+}
+.no-results,
+.error-404 {
+	.page-header,
+	.page-title {
+		float: none;
+	}
+	.page-header {
+		padding: 0;
+	}
+}
+.sticky,
+.bypostauthor,
+.gallery-caption {
+	/* Required empty classes */
+}
+.hentry {
+}
+.entry-header h1 {
+    margin-top: 0;
+}
+.entry-title a {
+    color: $main-color;
+    word-wrap: break-word;
+}
+.hentry a {
+	@include transition(0.3s all ease-in-out);
+	&:hover {
+		@include transition(0.3s all ease-in-out);
+	}
+}
+.byline,
+.updated {
+    display: none;
+}
+.single .byline,
+.group-blog .byline {
+    display: inline;
+}
+.page-links {
+    clear: both;
+    margin: 0 0 1.5em;
+}
+.entry-meta {
+    font-family: $open-sans;
+    font-size: 14px;
+    margin: 0 0 30px;
+}
+.entry-content {
+	margin: 0 0 30px;
+}
+.posted-on,
+.entry-categories,
+.entry-tags,
+.comments-link,
+.entry-meta .edit-link {
+    margin-right: 10px;
+
+    a:first-child:before {
+        content: '\f100';
+        position: relative;
+        top: 3px;
+        display: inline-block;
+        width: 1.4em;
+        font-size: 18px;
+        line-height: 1;
+        font-family: $genericons;
+        text-decoration: inherit;
+        font-weight: normal;
+        font-style: normal;
+        text-align: center;
+        vertical-align: top;
+        text-decoration: none;
+    }
+}
+.posted-on {
+    a:first-child {
+        &:before {
+            content: '\f303';
+        }
+    }
+}
+.entry-categories {
+    a:first-child {
+        &:before {
+            content: '\f301';
+        }
+    }
+}
+.entry-tags {
+    a:first-child {
+        &:before {
+            content: '\f302';
+        }
+    }
+}
+.comments-link {
+    a:first-child {
+        &:before {
+            content: '\f300';
+        }
+    }
+}
+.entry-meta .edit-link {
+    a:first-child {
+        &:before {
+            content: '\f411';
+        }
+    }
+}
+
+
+// ==========================================================================
+// Post Formats
+// ==========================================================================
+
+.entry-format {
+	margin-right: 10px;
+	&:before {
+		content: "";
+		position: relative;
+		top: 3px;
+		display: inline-block;
+		width: 1.4em;
+		font-size: 18px;
+		line-height: 1;
+		font-family: $genericons;
+		text-decoration: inherit;
+		font-weight: normal;
+		font-style: normal;
+		text-align: center;
+		vertical-align: top;
+		text-decoration: none;
+	}
+}
+.format-link .entry-title a:after {
+	content: "\f442";
+	display: inline-block;
+	font-size: 36px;
+	line-height: 1;
+	margin-left: 10px;
+	font-family: $genericons;
+	text-decoration: inherit;
+	font-weight: normal;
+	font-style: normal;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none;
+}
+.format-aside .entry-format:before {
+	content: "\f101";
+}
+.format-image .entry-format:before {
+	content: "\f102";
+}
+.format-video .entry-format:before {
+	content: "\f104";
+}
+.format-link .entry-format:before {
+	content: "\f107";
+}
+.format-quote .entry-format:before {
+	content: "\f106";
+}
+
+// ==========================================================================
+// Media
+// ==========================================================================
+
+.page-content img.wp-smiley,
+.entry-content img.wp-smiley,
+.comment-content img.wp-smiley {
+    border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+.wp-caption {
+    border: 1px solid #ccc;
+    margin-bottom: 1.5em;
+    max-width: 100%;
+}
+.wp-caption img[class*="wp-image-"] {
+    display: block;
+    margin: 1.2% auto 0;
+    max-width: 98%;
+}
+.wp-caption-text {
+    text-align: center;
+}
+.wp-caption .wp-caption-text {
+	font-size: 14px;
+    margin: 0.8075em;
+}
+.site-main .gallery {
+    margin-bottom: 1.5em;
+}
+.gallery-caption {
+}
+.site-main .gallery a img {
+    border: none;
+    display: block;
+    margin: 0 auto;
+    height: auto;
+    max-width: 90%;
+}
+.site-main .gallery dd {
+    margin: 0;
+}
+.gallery-item {
+	float: left;
+	margin: 0 0 1.5em;
+}
+/* Gallery column widths */
+.gallery-columns-1 .gallery-item {
+  width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+  width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+  width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+  width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+  width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+  width: 16.667%;
+}
+
+.gallery-columns-7 .gallery-item {
+  width: 14%;
+}
+
+.gallery-columns-8 .gallery-item {
+  width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+  width: 11.11%;
+}
+
+// Make sure embeds and iframes fit their containers
+embed,
+iframe,
+object {
+    max-width: 100%;
+}
+
+
+// ==========================================================================
+// Navigation
+// ==========================================================================
+
+.site-main [class*="navigation"] {
+    // margin-left: 15px;
+    overflow: hidden;
+}
+.nav-previous,
+.nav-next {
+    a {
+        display: inline-block;
+        margin: 0 30px;
+        padding: .7em 1em;
+        color: desaturate(lighten($main-color, 66%), 50%);
+        font-size: 14px;
+        font-family: $open-sans;
+        background: $main-color;
+        @include border-radius(5px);
+    }
+
+    .meta-nav {
+        display: none;
+    }
+}
+.nav-previous {
+    float: left;
+    width: 50%;
+
+    a {
+        margin-right: 0;
+    }
+}
+.nav-next {
+    float: right;
+    text-align: right;
+    width: 50%;
+}
+
+// ==========================================================================
+// Footer
+// ==========================================================================
+
+.site-footer {
+	@extend .clearfix;
+    padding: 30px;
+    font-size: 16px;
+    background: desaturate(lighten($main-color, 62%), 50%);
+    .sep {
+    	clear: both;
+    	display: block;
+    	height: 1px;
+    	visibility: hidden;
+    }
+}
+.site-info {
+	color: rgba(0,0,0,0.3);
+	font-size: 14px;
+}
+
+
+// ==========================================================================
+// Comments
+// ==========================================================================
+
+.comments-area {
+    margin-top: 15px;
+    background: #fff;
+    padding: 30px;
+    @include border-radius-corner(right, top, 5px);
+    @include border-radius-corner(right, bottom, 5px);
+}
+.comments-wrapper,
+html #respond {
+	clear: both;
+    text-align: left;
+}
+.comments-title {
+    margin: 0 0 30px;
+    font-weight: 400;
+
+    span {
+        font-weight: 800;
+    }
+}
+.comment-list {
+	list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .children {
+        list-style: none;
+    }
+}
+.comment-body {
+    position: relative;
+    margin-bottom: 45px;
+    @extend .clearfix;
+
+    .avatar {
+        margin-bottom: 15px;
+    }
+    .reply {
+        font-size: 14px;
+        font-family: $open-sans;
+    }
+}
+.no-comments {
+	clear: both;
+	font-style: italic;
+	text-align: center;
+}
+.comment-author {
+    .fn {
+        font-size: 14px;
+        font-family: $open-sans;
+        font-style: normal;
+        word-wrap: break-word;
+    }
+    .says {
+    	display: none;
+    }
+    .avatar {
+    	position: absolute;
+    	left: 0;
+    }
+}
+.comment-author,
+.comment-metadata,
+.comment-content,
+.comment .reply {
+    margin-left: 90px;
+}
+.comment-metadata {
+    line-height: 1;
+
+    a,
+    a:visited {
+        position: relative;
+        top: -5px;
+        color: #aaa;
+        font-size: 12px;
+        font-family: $open-sans;
+    }
+    .comment-edit-link,
+    .comment-edit-link:visited {
+        margin-left: 15px;
+        color: saturate(lighten($main-color, 15%), 25%);
+    }
+}
+.comment-content {
+    font-size: 18px;
+}
+.comment-respond {
+    @include border-radius-corner(right, top, 5px);
+    @include border-radius-corner(right, bottom, 5px);
+}
+.comments-wrapper + .comment-respond {
+    @include border-radius-corner(right, top, 0);
+}
+.comment-content a {
+    word-wrap: break-word;
+}
+.bypostauthor {
+}
+.form-allowed-tags {
+    font-size: 14px;
+    color: #777;
+    margin-bottom: 20px;
+}
+.comment-reply-title {
+    margin-top: 0;
+}
+.comment-notes {
+    margin-bottom: 1em;
+}
+.comment-form {
+    p {
+        position: relative;
+    }
+    label {
+        position: absolute;
+        top: 12px;
+        left: 1em;
+        font-family: $open-sans;
+        font-size: 13px;
+        pointer-events: none;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    textarea {
+        text-indent: 80px;
+        @include transition(all .2s ease-in-out);
+
+        &:active,
+        &:focus {
+            position: relative;
+            text-indent: 0;
+            z-index: 99;
+        }
+    }
+}
+.required {
+    color: #d01717;
+}
+.logged-in-as {
+    margin: 1em 0;
+}
+
+
+// ==========================================================================
+// Widgets
+// ==========================================================================
+
+.widget {
+    padding: 15px;
+    border-top: 1px solid desaturate(lighten($main-color, 56%), 50%);
+    background: desaturate(lighten($main-color, 62%), 50%);
+    overflow: hidden;
+
+    &:first-child {
+        border-top: none;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        ul {
+        	margin-left: 15px;
+        	ul {
+        		margin-left: 30px;
+        	}
+        }
+    }
+    input[type="search"] {
+        margin-bottom: 0;
+    }
+    a {
+    	@include transition(0.3s all ease-in-out);
+    	&:hover {
+    		@include transition(0.3s all ease-in-out);
+    	}
+    }
+}
+.widget-title {
+    margin-top: 0;
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+// Make sure select elements fit in widgets
+.widget select {
+    max-width: 100%;
+}
+
+// Search widget
+.widget_search .search-submit {
+    display: none;
+}
+
+#wp-calendar #next {
+	text-align: right;
+}
+
+
+// ==========================================================================
+// Infinite Scroll
+// ==========================================================================
+
+// Globally hidden elements when Infinite Scroll is supported and in use.
+.infinite-scroll .paging-navigation, // Older / Newer Posts Navigation (always hidden)
+.infinite-scroll.neverending .site-footer { // Theme Footer (when set to scrolling)
+    display: none;
+}
+
+// When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before
+.infinity-end.neverending .site-footer {
+    display: block;
+}
+
+#infinite-footer .container {
+	border: none;
+}
+#infinite-footer .blog-credits,
+#infinite-footer .blog-info {
+	a {
+		color: #333;
+		&:hover {
+			color: #333;
+		}
+	}
+}
+#infinite-handle {
+	margin: em(20,16) auto;
+	min-height: 35px;
+	text-align: center;
+	span {
+		@extend %button;
+		font-size: em(12,16);
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+.infinite-loader {
+	margin: 15px auto;
+	width: 34px;
+}
+
+// ==========================================================================
+// Legalese
+// ==========================================================================
+
+.legal {
+	font-family: $open-sans;
+	font-size: em(12,16);
+}
+
+
+// ==========================================================================
+// Social Links
+// ==========================================================================
+
+.social-links {
+	margin: 0 auto;
+}
+.social-links ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	li {
+		display: inline-block;
+		list-style: none;
+		margin: 0;
+	}
+	a {
+		display: inline-block;
+		margin-right: 5px;
+		text-decoration: none;
+		&:before {
+			content: "\f415";
+			display: block;
+			font-family: $genericons;
+			font-weight: normal;
+			font-size: 28px;
+			font-style: normal;
+			margin: 5px 0 0;
+			text-align: center;
+			text-decoration: inherit;
+			@include transition(all 0.1s ease-in-out);
+		}
+		&:hover {
+			text-decoration: none;
+			&:before {
+				text-decoration: none;
+				@include transition(all 0.1s ease-in-out);
+			}
+		}
+	}
+	&:last-of-type {
+		margin-right: 0;
+	}
+}
+.social-links ul a[href*="wordpress.org"]:before,
+.social-links ul a[href*="wordpress.com"]:before {
+	content: "\f205";
+}
+.social-links ul a[href*="facebook.com"]:before {
+	content: "\f204";
+}
+.social-links ul a[href*="twitter.com"]:before {
+	content: "\f202";
+}
+.social-links ul a[href*="dribbble.com"]:before {
+	content: "\f201";
+}
+.social-links ul a[href*="plus.google.com"]:before {
+	content: "\f206";
+}
+.social-links ul a[href*="pinterest.com"]:before {
+	content: "\f209";
+}
+.social-links ul a[href*="github.com"]:before {
+	content: "\f200";
+}
+.social-links ul a[href*="tumblr.com"]:before {
+	content: "\f214";
+}
+.social-links ul a[href*="youtube.com"]:before {
+	content: "\f213";
+}
+.social-links ul a[href*="flickr.com"]:before {
+	content: "\f211";
+}
+.social-links ul a[href*="vimeo.com"]:before {
+	content: "\f212";
+}
+.social-links ul a[href*="instagram.com"]:before {
+	content: "\f215";
+}
+.social-links ul a[href*="codepen.io"]:before {
+	content: "\f216";
+}
+.social-links ul a[href*="linkedin.com"]:before {
+	content: "\f207";
+}
+.social-links ul a[href*="/feed"]:before {
+	content: "\f413";
+}

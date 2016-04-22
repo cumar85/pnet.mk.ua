@@ -1,0 +1,59 @@
+/*
+Theme Name: Big Brother
+Theme URI: https://wordpress.com/themes/big-brother/
+Author: Automattic
+Author URI: http://wordpress.com/themes/
+Description: A pleasant-to-read, customizable theme designed for large organizations and government.
+Version: 1.0.3-wpcom
+License: GNU General Public License
+License URI: license.txt
+Text Domain: big-brother
+Domain Path: /languages/
+Tags: blue, light, blog, business, education, school, clean, conservative, traditional, right-sidebar, two-columns, custom-background, custom-colors, custom-header, custom-menu, full-width-template, infinite-scroll, post-formats, translation-ready, rtl-language-support, site-logo, fixed-layout, responsive-layout
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+ Big Brother is based on Underscores http://underscores.me/, (C) 2012-2013 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+// This was built using Michael Arestad's starting CSS framework, Aviator.
+
+// Variables
+@import "scss/variables/_colors"; // Colors
+@import "scss/variables/_typography"; // Typography
+@import "scss/variables/_variables"; // Other variables
+
+// Functions
+@import "scss/_functions.scss"; // Nifty functions. Take a look!
+
+// Mixins
+@import "scss/mixins/_vendor-prefixes"; // Quickly implement vendor-prefixes
+@import "scss/mixins/_aviator"; // Fancy aviator mixins full of nifty patterns
+
+// Normalize
+@import "scss/_normalize"; // Normalize.css + a goody or two
+@import "scss/_base"; // Style naked elements
+
+// Begin partials
+// @import "scss/partials/_grid-responsive"; // Responsive Bootstrap grid
+@import "scss/partials/_buttons"; // Funky button styles
+@import "scss/partials/_form"; // Form and input styles
+@import "scss/partials/_nav-horizontal"; // Horizontal navigation
+// @import "scss/partials/_nav-off-canvas"; // Slide-in "hamburger" or drawer menu for small screens
+// @import "scss/partials/_nav-side"; // Side navigation
+
+// Main styles
+@import "scss/_main"; // All of your .classy styles
+@import "scss/_media-queries"; // Media queries!
+
+// Support styles
+@import "scss/_chrome-frame"; // Styling for Chrome Frame prompt
+@import "scss/_helper"; // Some useful helper classes
+@import "scss/_ie"; // IE-specific styling :D
+@import "scss/_print"; // Print styling

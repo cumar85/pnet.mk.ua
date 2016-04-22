@@ -1,0 +1,246 @@
+// ==========================================================================
+// Media Queries
+// ==========================================================================
+
+@media (min-width: 768px) {
+
+	.breadcrumbs {
+		line-height: 1em;
+		padding-left: 0;
+		word-break: keep-all;
+		white-space: nowrap;
+	}
+	.breadcrumbs-root {
+		background: desaturate(lighten($main-color, 62%), 50%);
+		background: $main-color;
+		display: inline-block;
+		padding: .7em 1em;
+		color: desaturate(lighten($main-color, 66%), 50%);
+		font-weight: 800;
+		margin-bottom: 0.7em;
+		z-index: 1;
+		@include arrow-lazy(right, $size: 1.2em, $margin: 0, $color: $main-color);
+
+		&:visited {
+			color: #fff;
+		}
+	}
+	.breadcrumbs-ancestor,
+	.breadcrumbs-current {
+		background: desaturate(lighten($main-color, 62%), 50%);
+		padding: em(5, 16) em(12, 16) em(5, 16) em(32, 16);
+	}
+	.breadcrumbs-ancestor:before,
+	.breadcrumbs-current:before {
+		content: "";
+		margin: 0;
+	}
+	.breadcrumbs-ancestor {
+		position: relative;
+		&:first-of-type {
+			padding-left: 35px;
+		}
+		a,
+		&.cat-parents .sep {
+			border-color: desaturate(lighten($main-color, 62%), 50%);
+			&:before,
+			&:after {
+				$size: 1em;
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 100%;
+				margin-top: $size * -1;
+				border-top: $size solid transparent;
+				border-bottom: $size solid transparent;
+				border-left: $size solid red;
+				border-left-color: inherit;
+				z-index: 1;
+			}
+			&:before {
+				margin-left: 1px;
+				border-left-color: desaturate(lighten($main-color, 52%), 40%);
+			}
+		}
+		&.cat-parents .sep {
+			display: inline-block;
+			position: relative;
+			padding-left: 15px;
+			margin-right: 35px;
+			&:before,
+			&:after {
+				top: em(-6, 16);
+			}
+		}
+		&.cat-parents .sep:last-of-type {
+			display: none;
+		}
+	}
+	.breadcrumbs-current {
+		padding-right: em(18, 16);
+		color: #777;
+		background: #fff;
+		@include border-radius-corner(right, top, 3px);
+		@include border-radius-corner(right, bottom, 3px);
+	
+		+ .breadcrumbs-current {
+			margin-left: em(-12, 16);
+			padding-left: 0;
+		}
+	}
+}
+@media (min-width: 960px) {
+
+	h1 {
+		font-size: 2em;
+	}
+	h2 {
+		font-size: 1.5em;
+	}
+	h3 {
+		font-size: 1.17em;
+	}
+	h4 {
+		font-size: 1em;
+	}
+	h5 {
+		font-size: 0.83em;
+	}
+	h6 {
+		font-size: 0.75em;
+	}
+    .primary {
+    	float: left;
+    	width: 70%;
+	}
+	.secondary {
+		float: right;
+		width: 30%;
+
+		.widget {
+			&:first-of-type {
+				@include border-radius-corner(left, top, 5px);
+				@include border-radius-corner(right, top, 5px);
+			}
+			&:last-of-type {
+				@include border-radius-corner(left, bottom, 5px);
+				@include border-radius-corner(right, bottom, 5px);
+			}
+		}
+	}
+	.article-wrapper {
+		text-align: right;
+	}
+	.hentry {
+		margin: 0 auto;
+		max-width: 700px;
+		width: 100%;
+	}
+	.page-title {
+		max-width: 700px;
+		margin: 0 auto;
+		width: 100%;
+	}
+	.comments-area {
+		text-align: right;
+	}
+	.comments-wrapper,
+	html #respond {
+		max-width: 700px;
+		margin: 0 auto;
+		width: 100%;
+	}
+	// Small menu
+	.main-navigation > div > ul {
+		position: inherit;
+	}
+	.main-navigation.toggled > div > ul {
+		background: transparent;
+		border-top: 0;
+	}
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+	.main-navigation ul ul {
+		border: 1px solid #ecf1f4;
+		display: none;
+	}
+	.main-navigation {
+		background: darken($main-color, 4%);
+		ul {
+			text-align: center;
+			li a {
+				border: 0;
+				padding: 9px 15px;
+			}
+			li li a,
+			li li li a {
+				padding: 9px 15px;
+				text-align: left;
+			}
+		}
+		li {
+			display: inline-block;
+			float: none;
+			&:hover {
+				background: #ecf1f4;
+
+				a,
+				a:visited {
+					color: #3e749b;
+				}
+			}
+			> ul {
+				background: #ecf1f4;
+			}
+			li {
+				&:hover {
+					background: white;
+				}
+			}
+		}
+	}
+	.main-navigation.has-header {
+		background: transparentize(darken($main-color, 4%), .2);
+		position: relative;
+	}
+	.site-footer .sep {
+		clear: none;
+		display: inline;
+		height: auto;
+		visibility: visible;
+	}
+	.site-info {
+		float: left;
+		line-height: 28px;
+		max-width: 50%;
+	}
+	.social-links {
+		float: right;
+		margin: 0;
+		text-align: right;
+		ul a {
+			margin-left: 5px;
+			margin-right: auto;
+			&:before {
+				margin-top: 0;
+			}
+		}
+	}
+}
+
+@media (min-width: 1280px) {
+	.site-content,
+	.main-navigation ul,
+	.site-footer-wrapper {
+		margin: 0 auto;
+		max-width: 1280px;
+	}
+	.content-area,
+	.breadcrumbs {
+		padding-left: 30px;
+	}
+}
